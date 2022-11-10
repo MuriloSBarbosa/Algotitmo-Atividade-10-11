@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>atividade</title>
+</head>
+
+<body>
+    <h2></h2>
+    <button onclick="turfe()"></button>
+    <div id="div_resultado"></div>
+</body>
+
+</html>
+<script>
+    var cavalos = [
+        {
+            voltaAtual: [],
+            voltaSomada: []
+        },
+        {
+            voltaAtual: [],
+            voltaSomada: []
+        },
+        {
+            voltaAtual: [],
+            voltaSomada: []
+        },
+    ]
+    function turfe() {
+
+        for (var i = 0; i > 7; i++) {
+            var RodadaCavalo1 = (7 + Math.random() +)
+            var RodadaCavalo2 = (7 + Math.random() +)
+            var RodadaCavalo3 = (7 + Math.random() +)
+
+            cavalos[0].voltaAtual = RodadaCavalo1;
+            cavalos[1].voltaAtual = RodadaCavalo2;
+            cavalos[2].voltaAtual = RodadaCavalo3;
+
+            cavalos[0].voltaSomada = RodadaCavalo1;
+            cavalos[1].voltaSomada = RodadaCavalo2;
+            cavalos[2].voltaSomada = RodadaCavalo3;
+            
+        }
+    }
+</script>
