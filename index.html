@@ -10,7 +10,7 @@
 
 <body>
     <h2></h2>
-    <button onclick="turfe()"></button>
+    <button onclick="turfe()">Largada</button>
     <div id="div_resultado"></div>
 </body>
 
@@ -32,19 +32,22 @@
     ]
     function turfe() {
 
-        for (var i = 0; i > 7; i++) {
-            var RodadaCavalo1 = (7 + Math.random() +)
-            var RodadaCavalo2 = (7 + Math.random() +)
-            var RodadaCavalo3 = (7 + Math.random() +)
+        for (var i = 0; i < 7; i++) {
+            var RodadaCavalo1 = (7 + Math.random() *10)
+            var RodadaCavalo2 = (7 + Math.random() *10)
+            var RodadaCavalo3 = (7 + Math.random() *10)
 
             cavalos[0].voltaAtual = RodadaCavalo1;
             cavalos[1].voltaAtual = RodadaCavalo2;
             cavalos[2].voltaAtual = RodadaCavalo3;
 
-            cavalos[0].voltaSomada = RodadaCavalo1;
-            cavalos[1].voltaSomada = RodadaCavalo2;
-            cavalos[2].voltaSomada = RodadaCavalo3;
+            cavalos[0].voltaSomada += RodadaCavalo1;
+            cavalos[1].voltaSomada += RodadaCavalo2;
+            cavalos[2].voltaSomada += RodadaCavalo3;
             
+            div_resultado.innerHTML += `Volta ${i + 1}<br>cavalo 01 ${cavalo[0].voltaAtual} - ${cavalo[0].voltaSomada} <br>
+            cavalo 01 ${cavalo[1].voltaAtual} - ${cavalo[1].voltaSomada} <br>
+            cavalo 01 ${cavalo[2].voltaAtual} - ${cavalo[2].voltaSomada} <br> `
         }
     }
 </script>
