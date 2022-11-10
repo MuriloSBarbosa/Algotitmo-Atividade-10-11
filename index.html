@@ -27,7 +27,7 @@
     <h2>Digite o mínimo de tempo das voltas</h2>
     <input type="number" id="in_minVoltas">
 
-    
+
     <button onclick="turfe()">Largada</button>
     <div id="div_resultado"></div>
 </body>
@@ -96,11 +96,39 @@
 
             cavalo ${cavalos[2].nome}: ${(cavalos[2].voltaAtual).toFixed(2)} - ${(cavalos[2].voltaSomada).toFixed(2)} <br> `
         }
-        
-        if (cavalos[0].voltaSomada > cavalos[1].voltaSomada && cavalos[0].voltaSomada > cavalos[2].voltaSomada) {
-            div_resultado.innerHTML += "C"
+
+        var cavalo1 = cavalos[0].voltaSomada;
+        var cavalo2 = cavalos[1].voltaSomada;
+        var cavalo3 = cavalos[2].voltaSomada;
+
+        var lugar1;
+        var lugar2;
+        var lugar3;
+
+        if (cavalo1 < cavalo2 && cavalo1 < cavalo3) {
+            lugar1 = cavalos[0].nome;
+            if (cavalo2 < cavalo3) {
+                lugar2 = cavalos[1].nome;
+            } else {
+                lugar3 = cavalos[1].nome;
+            }
+        } else if (cavalo2 < cavalo1 && cavalo2 < cavalo3) {
+            lugar1 = cavalos[1].nome;
+            if (cavalo1 < cavalo3) {
+                lugar2 = cavalos[0].nome;
+            } else {
+                lugar3 = cavalos[2].nome;
+            }
+        } else if (cavalo3 < cavalo1 && cavalo3 < cavalo2) {
+            lugar1 = cavalos[2].nome;
+            if (cavalo1 < cavalo3) {
+                lugar2 = cavalos[0].nome;
+            } else {
+                lugar3 = cavalos[1].nome;
+            }
         }
 
-    
+
+
     }
 </script>
