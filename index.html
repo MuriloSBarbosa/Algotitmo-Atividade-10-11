@@ -105,35 +105,35 @@
         var lugar2 = '';
         var lugar3 = '';
 
-        if (cavalo1 < cavalo2 && cavalo1 < cavalo3) {
+        if (cavalo1 > cavalo2 && cavalo1 > cavalo3) {
             lugar1 = cavalos[0].nome;
-            if (cavalo2 < cavalo3) {
+            if (cavalo2 > cavalo3) {
                 lugar2 = cavalos[1].nome;
                 lugar3 = cavalos[2].nome;
             }
-            if (cavalo3 < cavalo2) {
+            if (cavalo3 > cavalo2) {
                 lugar2 = cavalos[2].nome;
                 lugar3 = cavalos[1].nome;
             }
-        } else if (cavalo2 < cavalo1 && cavalo2 < cavalo3) {
+        } else if (cavalo2 > cavalo1 && cavalo2 > cavalo3) {
             lugar1 = cavalos[1].nome;
-            if (cavalo1 < cavalo3) {
+            if (cavalo1 > cavalo3) {
                 lugar2 = cavalos[0].nome;
                 lugar3 = cavalos[2].nome;
             }
-            if (cavalo3 < cavalo1) {
+            if (cavalo3 > cavalo1) {
                 lugar2 = cavalos[2].nome;
                 lugar3 = cavalos[0].nome;
 
             }
-        } else if (cavalo3 < cavalo1 && cavalo3 < cavalo2) {
+        } else if (cavalo3 > valo1 && cavalo3 > cavalo2) {
             lugar1 = cavalos[2].nome;
-            if (cavalo1 < cavalo2) {
-                lugar2 = cavalos[0].nome;
-                lugar3 = cavalos[2].nome;
-            } if (cavalo2 < cavalo1) {
-                lugar2 = cavalos[2].nome;
+            if (cavalo1 > cavalo2) {
+                lugar2 = cavalos[1].nome;
                 lugar3 = cavalos[0].nome;
+            } if (cavalo2 > cavalo1) {
+                lugar2 = cavalos[0].nome;
+                lugar3 = cavalos[1].nome;
             }
         }
 
