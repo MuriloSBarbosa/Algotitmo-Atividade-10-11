@@ -33,9 +33,13 @@
     function turfe() {
 
         for (var i = 0; i < 7; i++) {
-            var RodadaCavalo1 = (7 + Math.random() *10)
-            var RodadaCavalo2 = (7 + Math.random() *10)
-            var RodadaCavalo3 = (7 + Math.random() *10)
+            var RodadaCavalo1 = (7 + Math.random() * (9 -2))
+            var RodadaCavalo2 = (7 + Math.random() * (9 -2))
+            var RodadaCavalo3 = (7 + Math.random() * (9 -2))
+            
+            console.log(RodadaCavalo1);
+            console.log(RodadaCavalo2);
+            console.log(RodadaCavalo3);
 
             cavalos[0].voltaAtual = RodadaCavalo1;
             cavalos[1].voltaAtual = RodadaCavalo2;
@@ -44,10 +48,16 @@
             cavalos[0].voltaSomada += RodadaCavalo1;
             cavalos[1].voltaSomada += RodadaCavalo2;
             cavalos[2].voltaSomada += RodadaCavalo3;
+
             
-            div_resultado.innerHTML += `Volta ${i + 1}<br>cavalo 01 ${cavalo[0].voltaAtual} - ${cavalo[0].voltaSomada} <br>
-            cavalo 01 ${cavalo[1].voltaAtual} - ${cavalo[1].voltaSomada} <br>
-            cavalo 01 ${cavalo[2].voltaAtual} - ${cavalo[2].voltaSomada} <br> `
+            div_resultado.innerHTML +=
+            `Volta ${i + 1}<br>
+             
+            cavalo 01 ${cavalos[0].voltaAtual.toFixed(2)} - ${cavalos[0].voltaSomada.toFixed(2)} <br>
+
+            cavalo 02 ${cavalos[1].voltaAtual.toFixed(2)} - ${cavalos[1].voltaSomada.toFixed(2)} <br>
+
+            cavalo 03 ${cavalos[2].voltaAtual.toFixed(2)} - ${cavalos[2].voltaSomada.toFixed(2)} <br> `
         }
     }
 </script>
