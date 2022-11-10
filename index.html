@@ -21,6 +21,12 @@
     <h2>Digite a quantidade de voltas</h2>
     <input type="text" id="in_voltas">
 
+    <h2>Digite o máximo de tempo das voltas</h2>
+    <input type="number" id="in_maxVoltas">
+
+    <h2>Digite o mínimo de tempo das voltas</h2>
+    <input type="number" id="in_minVoltas">
+
     
     <button onclick="turfe()">Largada</button>
     <div id="div_resultado"></div>
@@ -47,6 +53,11 @@
     ]
     function turfe() {
         div_resultado.innerHTML = "";
+
+        var maxVoltas = Number(in_maxVoltas.value)
+
+        var minVoltas = Number(in_minVoltas.value)
+
         var nome1 = in_nome.value;
         var nome2 = in_nome2.value;
         var nome3 = in_nome3.value;
@@ -57,9 +68,9 @@
         cavalos[2].nome = nome3;
 
         for (var i = 0; i < voltas; i++) {
-            var RodadaCavalo1 = (7 + Math.random() * 2)
-            var RodadaCavalo2 = (7 + Math.random() * 2)
-            var RodadaCavalo3 = (7 + Math.random() * 2);
+            var RodadaCavalo1 = (minVoltas + Math.random() * (maxVoltas - minVoltas))
+            var RodadaCavalo2 = (minVoltas + Math.random() * (maxVoltas - minVoltas))
+            var RodadaCavalo3 = (minVoltas + Math.random() * (maxVoltas - minVoltas));
 
             console.log(RodadaCavalo1);
             console.log(RodadaCavalo2);
@@ -85,7 +96,11 @@
 
             cavalo ${cavalos[2].nome}: ${(cavalos[2].voltaAtual).toFixed(2)} - ${(cavalos[2].voltaSomada).toFixed(2)} <br> `
         }
+        
+        if (cavalos[0].voltaSomada > cavalos[1].voltaSomada && cavalos[0].voltaSomada > cavalos[2].voltaSomada) {
+            div_resultado.innerHTML += "C"
+        }
 
-
+    
     }
 </script>
