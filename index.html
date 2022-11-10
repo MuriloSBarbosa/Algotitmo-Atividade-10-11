@@ -110,7 +110,7 @@
             if (cavalo2 < cavalo3) {
                 lugar2 = cavalos[1].nome;
             } else {
-                lugar3 = cavalos[1].nome;
+                lugar3 = cavalos[2].nome;
             }
         } else if (cavalo2 < cavalo1 && cavalo2 < cavalo3) {
             lugar1 = cavalos[1].nome;
@@ -127,7 +127,13 @@
                 lugar3 = cavalos[1].nome;
             }
         }
-
+        
+        div_resultado.innerHTML +=  
+                `
+             
+            Em 1° lugar ${lugar1}<br>
+            Em 2° lugar ${lugar2}<br>
+            Em 3° lugar ${lugar3}<br> `
 
 
     }
